@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Todo App</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- main app (container) -->
+    <main class="todo">
+        <header class="todo__header"><h1>Activity App</h1></header>
+        <!-- form for adding activities -->
+        <form action="#" class="todo__form">
+            <input type="text" class="todo__input" placeholder="Enter activity text..." required />
+            <button type="submit" class="todo__addBtn">+</button>
+        </form>
+
+        <!-- list of activities -->
+        <ol class="todo__list">
+            <li class="todo__list-item">
+                <span class="todo__item-text">Wake up, then pray for the day</span>
+                <span class="todo__item-btn">
+                    <button class="item__btn item__btn--edit">edit</button>
+                    <button class="item__btn item__btn--delete">delete</button>
+                </span>
+            </li>
+            <li class="todo__list-item">
+                <span class="todo__item-text">Sleep Back</span>
+                <span class="todo__item-btn">
+                    <button class="item__btn item__btn--edit">edit</button>
+                    <button class="item__btn item__btn--delete">delete</button>
+                </span>
+            </li>
+            <li class="todo__list-item">
+                <span class="todo__item-text">Keep sleeping</span>
+                <span class="todo__item-btn">
+                    <button class="item__btn item__btn--edit">edit</button>
+                    <button class="item__btn item__btn--delete">delete</button>
+                </span>
+            </li>
+        </ol>
+    </main>
+
+    <!-- included script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
