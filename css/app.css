@@ -53,11 +53,9 @@
 }
 
 /* Add activity button */
-.todo__addBtn {
+.todo__btn {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: var(--color-secondary);
-    color: #fff;
     text-align: center;
     font-size: 2rem;
     border: none;
@@ -67,14 +65,25 @@
     transition: transform .2s;
 }
 
-.todo__addBtn:hover {
+.todo__btn:hover {
     transform: scale(1.2);
     box-shadow: 0 .5rem 1rem rgba(1, 1, 1, 0.3);
 }
 
-.todo__addBtn:active {
+.todo__btn:active {
     transform: scale(1.1);
     box-shadow: 0 .2rem .5rem rgba(1, 1, 1, 0.3);
+}
+
+.todo__btn--add {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.todo__btn--save {
+    display: none;
+    background-color: var(--color-secondary-dark);
+    color: #fff;
 }
 
 /* List of Actitvities */
@@ -93,7 +102,14 @@
     margin-bottom: 1rem;
 }
 
+
 /* Item btn */
+.todo__item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .item__btn {
     text-transform: capitalize;
     font-size: 1.2rem;
@@ -104,6 +120,7 @@
     outline: none;
     border-radius: .3rem;
     cursor: pointer;
+    margin: 0 .2rem;
 }
 
 .item__btn:hover {
@@ -125,4 +142,57 @@
 .item__btn--delete {
     background-color: var(--color-secondary);
     color: #fff;
+}
+
+/* clear btn */
+.clear__btn {
+    display: block;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    transition: transform .15s;
+    cursor: pointer;
+}
+
+.clear__btn:hover {
+    box-shadow: 0 .2rem .5rem rgba(1, 1, 1, 0.3);
+    transform: scale(1.04);
+}
+
+.clear__btn:active {
+    box-shadow: 0 .2rem .5rem rgba(1, 1, 1, 0.1);
+    transform: scale(1.02);
+}
+
+/* Media queries */
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .todo {
+        padding: 2rem 2rem;
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    .todo__list {
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .todo__list-item {
+        flex-direction: column;
+    }
+
+    .todo__item-btn {
+        justify-content: space-between;
+    }
 }
